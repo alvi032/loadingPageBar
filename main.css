@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Saira);
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Saira', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.exec h2{
+    overflow: hidden;
+    border-right: 1px solid black;
+    padding-right: 2px;
+    white-space: nowrap;
+    font-weight: lighter;
+    margin: 0 auto;
+    animation:
+        typing 1s steps(20, end) forwards,
+        cursor 0.75s step-end infinite;
+
+}
+
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+@keyframes cursor{
+    from, to {
+        border-color: transparent;}
+    50% {
+        border-color: black;
+    }
+}
+
+
+.loadBorder{
+    opacity: 0;
+    height: 0px;
+    width: 250px;
+    margin-top: 1em;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    animation:
+        appear 0.25s forwards;
+    animation-delay: 1.25s;
+}
+@keyframes appear {
+    from{height: 0; opacity: 0;}
+    to{height: 8px; opacity: 100;}
+}
+.loadBar{
+    height: 5px;
+    width: 0px;
+    margin-left: 1px;
+    background-color: black;
+    animation:
+        loadIt 1s forwards;
+    animation-delay: 1.5s;
+}
+@keyframes loadIt {
+    0% {width: 0}
+    100% {width: 248px}
+}
